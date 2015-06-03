@@ -1,0 +1,12 @@
+// vim:ft=javascript
+// $Id$
+
+ARG_ENABLE('stub', 'Building STUB application wrapper', 'no');
+
+
+if (PHP_STUB  != "no") {
+	SAPI('stub', 'php_stub.c php_embed.c', 'stub.exe', '/D PHP_STUB /D WIN32');
+	ADD_FLAG("LIBS_STUB", "ws2_32.lib");
+	ADD_FLAG("LDFLAGS_STUB", "/stack:8388608");
+}
+

@@ -1,0 +1,5 @@
+The STUB (stand alone applications wrapper) SAPI has been introduced
+with a goal of making PHP better at supporting the creation of 
+stand alone applications.
+
+
