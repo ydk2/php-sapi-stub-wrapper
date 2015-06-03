@@ -23,11 +23,31 @@ int main(int argc, char **argv)
 #endif
 
 	int retval = SUCCESS;
-	#if defined(DARWIN)
-	char* code = "include dirname(__DIR__).'/Resources/assets/app.php';";	
-	#else
+#ifdef BINARY_STUB_BCOMPILER
+    char* code = " $s =((PHP_SHLIB_SUFFIX == 'dll') ? 'php_' : '') . 'bcompiler.' .PHP_SHLIB_SUFFIX; "
+    "dl($s); "
+    "if (!extension_loaded('bcompiler')) { echo 'bcompiler not loaded - dll/so should be in same directory as exe'; exit; }"
+    "bcompiler_load_exe($_SERVER['argv'][0]);"
+    "if (!class_exists('app')) { echo 'main class does not exist';   }"
+    "app::main();";
+#elif BINARY_STUB_EMPTY
+    char* code = "//START_BLOCK                                                          "
+                "                                                          "
+                "                                                          "
+                "                                                          "
+                "                                                          "
+                "                                                          "
+                "                                                          "
+                "                                                          "
+                "                                                          "
+                "                                                          //END_BLOCK";
+#else
+#if defined(DARWIN)
+	char* code = "include dirname(__DIR__).'/Resources/assets/app.php';";
+#else
 	char* code = "include __DIR__.'/assets/app.php';";
-	#endif
+#endif
+#endif
 	char buf[PATH_MAX]; /* not sure about the "+ 1" */
     char *res = realpath(argv[0], buf);
 	#ifdef WIN32
