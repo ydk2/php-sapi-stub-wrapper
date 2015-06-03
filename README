@@ -2,4 +2,26 @@ The STUB (stand alone applications wrapper) SAPI has been introduced
 with a goal of making PHP better at supporting the creation of 
 stand alone applications.
 
+Install instruction:
+Download and extract into php source $(PHP_SRC)/sapi/stub, rename folder if needed.
+In command line put:
+cd $(PHP_SRC)
+then:
+buildconf --force
+next enable build stub wrapper:
+*nixes:
+./configure --enable-stub-wrapper 
+Windows:
+configure --enable-stub
+and 
+make
+
+Copy or move stub(.exe) in folder app, put app.php in assets folder in program directory. 
+Under OSX put in $(APP).app/Contents/MacOS/stub and app.php place in $(APP).app/Contents/Resources/assets.
+Php extensions copy too in $(PROGRAM)/ext folder on unixes, on Windows extensions is in application directory.
+
+Build portable GUI apps with wxphp.
+
+Autopack apps is in under development.
+
 
