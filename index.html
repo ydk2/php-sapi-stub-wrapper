@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Php-sapi-stub-wrapper by ydk2</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Php-sapi-stub-wrapper</h1>
+        <p>Standalone application wrapper SAPI for php</p>
+
+        <p class="view"><a href="https://github.com/ydk2/php-sapi-stub-wrapper">View the Project on GitHub <small>ydk2/php-sapi-stub-wrapper</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ydk2/php-sapi-stub-wrapper/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ydk2/php-sapi-stub-wrapper/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ydk2/php-sapi-stub-wrapper">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="php-for-desktop-apps" class="anchor" href="#php-for-desktop-apps" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PHP for desktop apps</h1>
+
+<hr>
+
+<p>The STUB (stand alone applications wrapper) SAPI has been introduced
+with a goal of making PHP better at supporting the creation of 
+stand alone applications.</p>
+
+<h3>
+<a id="install-instruction" class="anchor" href="#install-instruction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install instruction:</h3>
+
+<p>Download and extract into php source $(PHP_SRC)/sapi/stub, rename folder if needed.
+In command line put:
+<code>cd $(PHP_SRC)</code>
+then:
+<code>buildconf --force</code>
+next enable build stub wrapper:
+*nixes:
+<code>./configure --enable-stub-wrapper</code>
+Windows:
+<code>configure --enable-stub</code>
+and 
+<code>make</code></p>
+
+<h3>
+<a id="how-deploy-app" class="anchor" href="#how-deploy-app" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How deploy app</h3>
+
+<p>Copy or move stub(.exe) in folder app, put app.php in assets folder in program directory. 
+Under OSX put in $(APP).app/Contents/MacOS/stub and app.php place in $(APP).app/Contents/Resources/assets.
+Php extensions copy too in $(PROGRAM)/ext folder on unixes, on Windows extensions is in application directory.</p>
+
+<p>Build portable GUI apps with wxphp.</p>
+
+<p>Autopack apps is in under development.</p>
+
+<p>Current binaries available on sf.net as full GUI apps (Mac, Windows, Linux/Ubuntu) in download section
+<a href="https://sourceforge.net/projects/php-sapi-stub-wrapper/?source=directory">sourceforge.net</a></p>
+
+<h3>
+<a id="support-on-forum" class="anchor" href="#support-on-forum" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support on forum</h3>
+
+<p><a href="http://forums.wxphp.org/viewforum.php?f=5">Here:</a></p>
+
+<hr>
+
+<p>Many thanks for <a href="http://wxphp.org/">wxphp</a> team.</p>
+
+<p>Contact with me <a href="http://www.ydk2.tk/en/kontakt.html">here</a> (contact form), donations is acceptable to, check on side.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ydk2">ydk2</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
